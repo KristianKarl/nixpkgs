@@ -11,14 +11,14 @@
 
 buildPythonPackage rec {
   pname = "proto-plus";
-  version = "1.25.0";
+  version = "1.26.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "proto-plus-python";
     tag = "v${version}";
-    hash = "sha256-rRA5t3QPVSeAqy60icrgvYKbvrClv22I3IYxHoMftQ0=";
+    hash = "sha256-7FonHHXpgJC0vg9Y26bqz0g1NmLWwaZWyFZ0kv7PjY8=";
   };
 
   build-system = [ setuptools ];
