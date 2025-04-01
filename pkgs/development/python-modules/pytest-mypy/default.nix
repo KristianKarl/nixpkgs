@@ -12,12 +12,12 @@
 
 buildPythonPackage rec {
   pname = "pytest-mypy";
-  version = "0.10.3";
+  version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-+EWPZCMj8Toso+LmFQn3dnlmtSe02K3M1QMsPntP09s=";
+    hash = "sha256-4oSi6NJ7wWowacNKtgGy9I/OupvUNdZfabfY9Bw3PW4=";
   };
 
   nativeBuildInputs = [
