@@ -8,13 +8,13 @@
 }:
 buildPythonPackage rec {
   pname = "domdf-python-tools";
-  version = "3.9.0";
+  version = "3.10.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit version;
     pname = "domdf_python_tools";
-    hash = "sha256-H4qWlxF4MzpV4IPjVhDXaIzXYgrSuZeQFk4fwaNhTBg=";
+    hash = "sha256-KuMI0vTx6RRfX0ulf4QPv9HCmD7ibkgkNHeJZJ064pg=";
   };
 
   build-system = [ setuptools ];
