@@ -48,9 +48,6 @@ lib.fix (
       # we provide patchelf natively, not through the python package
       sed -i '/patchelf/d' pyproject.toml
 
-      # dont run autotols configure phase
-      rm configure.ac configure
-
       patchShebangs test/*.sh
     '';
 
