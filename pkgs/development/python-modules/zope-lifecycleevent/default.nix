@@ -12,13 +12,13 @@
 
 buildPythonPackage rec {
   pname = "zope-lifecycleevent";
-  version = "5.0";
+  version = "5.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope.lifecycleevent";
     inherit version;
-    hash = "sha256-6tP7SW52FPm1adFtrUt4BSsKwhh1utjWbKNQNS2bb50=";
+    hash = "sha256-mlIpRtOGxZahqPq13Yf0MhoYD+49rVYTV3JQu3EjdTs=";
   };
 
   build-system = [ setuptools ];
