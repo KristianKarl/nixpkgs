@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "repoze-who";
-  version = "3.0.0";
+  version = "3.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "repoze.who";
     inherit version;
-    hash = "sha256-6VWt8AwfCwxxXoKJeaI37Ev37nCCe9l/Xhe/gnYNyzA=";
+    hash = "sha256-xSimrFqeBp7Vo3UK7zd2IuzlPt0Ah8/AtoXyokwGQnQ=";
   };
 
   nativeBuildInputs = [ setuptools ];
