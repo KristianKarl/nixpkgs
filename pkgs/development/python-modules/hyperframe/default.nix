@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "hyperframe";
-  version = "6.0.1";
+  version = "6.1.0";
   format = "setuptools";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "ae510046231dc8e9ecb1a6586f63d2347bf4c8905914aa84ba585ae85f28a914";
+    sha256 = "sha256-9jCQigCFSnreq9Y4K0OSOkxM1Lgh/LUn5queFTgqOwg=";
   };
 
   nativeCheckInputs = [ pytestCheckHook ];
