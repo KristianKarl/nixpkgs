@@ -8,13 +8,13 @@
 
 buildPythonPackage rec {
   pname = "zope-cachedescriptors";
-  version = "5.0";
+  version = "5.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope.cachedescriptors";
     inherit version;
-    hash = "sha256-MVe+hm/Jck0Heotb9sP8IcOKQUerZk5yRiLf5fr/BIo=";
+    hash = "sha256-C4bPDC6XtssteBojPB1M80wfxp8/SIqO9z+2GVzv9UA=";
   };
 
   build-system = [ setuptools ];
