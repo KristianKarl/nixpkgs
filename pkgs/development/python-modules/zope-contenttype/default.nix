@@ -8,13 +8,13 @@
 
 buildPythonPackage rec {
   pname = "zope-contenttype";
-  version = "5.1";
+  version = "5.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope.contenttype";
     inherit version;
-    hash = "sha256-AAHvG2XKZQUZBW3OUwxY0LOWlXzPBQIyPIoVSdtk0xc=";
+    hash = "sha256-yNODkEXuMBQU63Zr1izLvYPlHRo1Az4i/HrpdPE4uTY=";
   };
 
   build-system = [ setuptools ];
