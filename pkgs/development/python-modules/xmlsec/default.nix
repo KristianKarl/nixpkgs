@@ -17,12 +17,12 @@
 
 buildPythonPackage rec {
   pname = "xmlsec";
-  version = "1.3.14";
+  version = "1.3.15";
   format = "pyproject";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-k0+ATy+JW824bx6u4ja2YQE1YO5p7BCNKc3W5fKSotk=";
+    hash = "sha256-uqhWuD0AEuJ45vbL7JasgSjeZnyp+pou6wLHUugW9tg=";
   };
 
   patches = [
