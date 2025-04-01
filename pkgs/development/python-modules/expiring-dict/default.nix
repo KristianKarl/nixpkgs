@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "expiring-dict";
-  version = "1.1.1";
+  version = "1.1.2";
   format = "setuptools";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-J3lC7cYNWxI0V8GkaGmMlJI9v6yNQLJjuSHATmlA3Ak=";
+    hash = "sha256-yoy4AjBOrlszoj7EwZAZthCt/aUMvEyb+jrVws04djE=";
   };
 
   propagatedBuildInputs = [ sortedcontainers ];
