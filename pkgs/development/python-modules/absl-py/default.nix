@@ -8,14 +8,14 @@
 
 buildPythonPackage rec {
   pname = "absl-py";
-  version = "2.1.0";
+  version = "2.2.1";
   pyproject = true;
 
   disabled = pythonOlder "3.7";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-eCB5DvuzFnOc3otOGTVyQ/w2CKFSAkKIUT3ZaNfZWf8=";
+    hash = "sha256-THvFDULQIcEtTzG3ABFnkl4L1xrehTBp9kr0EPVWX/k=";
   };
 
   build-system = [ setuptools ];
