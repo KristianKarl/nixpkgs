@@ -8,12 +8,12 @@
 }:
 buildPythonPackage rec {
   pname = "deprecation-alias";
-  version = "0.3.3";
+  version = "0.4.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-5zJm1MhmwEAHnXoEf5KsLNRotGCAMkht8f/X7xR+ZRU=";
+    hash = "sha256-pY0udEkceDTp0xh4jaYCcvovga64FLQFWkupCgpBdA8=";
   };
 
   build-system = [ setuptools ];
