@@ -12,7 +12,7 @@
 
 buildPythonPackage rec {
   pname = "pastescript";
-  version = "3.6.0";
+  version = "3.7.0";
   pyproject = true;
 
   disabled = pythonOlder "3.7";
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchPypi {
     pname = "PasteScript";
     inherit version;
-    hash = "sha256-HCLSt81TUWRr7tKMb3DrSipLklZR2a/Ko1AdBsq7UXE=";
+    hash = "sha256-U28CjftuUynGezIpnhyTA/kSZOSXk8xpFusKc+tKJSE=";
   };
 
   build-system = [ setuptools ];
