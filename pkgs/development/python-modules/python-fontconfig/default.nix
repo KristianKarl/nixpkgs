@@ -15,12 +15,12 @@ let
 in
 buildPythonPackage rec {
   pname = "python-fontconfig";
-  version = "0.5.1";
+  version = "0.6.0";
 
   src = fetchPypi {
     pname = "Python-fontconfig";
     inherit version;
-    sha256 = "154rfd0ygcbj9y8m32n537b457yijpfx9dvmf76vi0rg4ikf7kxp";
+    sha256 = "sha256-1esVZVMvkcAKWchaOrIki2CYoJDffN1PW+A9nXWjCeU=";
   };
 
   buildInputs = [ fontconfig ];
