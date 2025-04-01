@@ -11,12 +11,12 @@
 
 buildPythonPackage rec {
   pname = "requests-unixsocket";
-  version = "0.3.0";
+  version = "0.4.1";
   format = "setuptools";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-KDBCg+qTV9Rf/1itWxHkdwjPv1gGgXqlmyo2Mijulx4=";
+    hash = "sha256-sllhWMNW7O5o0nukaaUiESMKxvsM3otmr7GfDtR6GZU=";
   };
 
   patches = [
