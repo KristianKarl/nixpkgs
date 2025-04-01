@@ -9,13 +9,13 @@
 
 buildPythonPackage rec {
   pname = "zope-testing";
-  version = "5.0.1";
+  version = "5.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope.testing";
     inherit version;
-    hash = "sha256-6HzQ2NZmVzza8TOBare5vuyAGmSoZZXBnLX+mS7z1kk=";
+    hash = "sha256-cTXrquw9OHluSRqa2xJ6NlGqDjsgEo3mx3hFH6EazEc=";
   };
 
   build-system = [ setuptools ];
