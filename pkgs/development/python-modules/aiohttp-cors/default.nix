@@ -9,12 +9,12 @@
 
 buildPythonPackage rec {
   pname = "aiohttp-cors";
-  version = "0.7.0";
+  version = "0.8.1";
   format = "setuptools";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "0pczn54bqd32v8zhfbjfybiza6xh1szwxy6as577dn8g23bwcfad";
+    sha256 = "sha256-zKz5y4S2STnqFfhZoUavH2Yqax1oF1dUoHMV4wX7FAM=";
   };
 
   disabled = pythonOlder "3.5";
