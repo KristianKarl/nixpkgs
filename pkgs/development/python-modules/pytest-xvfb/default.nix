@@ -9,14 +9,14 @@
 
 buildPythonPackage rec {
   pname = "pytest-xvfb";
-  version = "3.0.0";
+  version = "3.1.1";
   format = "setuptools";
 
   disabled = pythonOlder "3.7";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-N0arH00RWfA/dRY40FNonM0oQpGzi4+wPT67579pz8A=";
+    hash = "sha256-kFk2NEJ9l0snLoRXk+RTP1uCfJ2EwFGHkBNiRQQXXkQ=";
   };
 
   buildInputs = [ pytest ];
