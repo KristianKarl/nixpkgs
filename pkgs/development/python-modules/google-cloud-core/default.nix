@@ -12,14 +12,14 @@
 
 buildPythonPackage rec {
   pname = "google-cloud-core";
-  version = "2.4.1";
+  version = "2.4.3";
   format = "setuptools";
 
   disabled = pythonOlder "3.7";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-m3dJJyqBK95Y//KIaNDF4vWFuC834JofbtLU0Q8TQHM=";
+    hash = "sha256-H6ti1xAoRLJ4/m3q068yQIsd8+sG9cfoY0y9QO3E2lM=";
   };
 
   propagatedBuildInputs = [
