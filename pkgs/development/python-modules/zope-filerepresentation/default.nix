@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "zope-filerepresentation";
-  version = "6.0";
+  version = "6.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope.filerepresentation";
     inherit version;
-    hash = "sha256-yza3iGspJ2+C8WhfPykfQjXmac2HhdFHQtRl0Trvaqs=";
+    hash = "sha256-pOH4xBgMDIZMTLs+fq7uVkUwNjLx0ElwBlS+ma/jges=";
   };
 
   build-system = [ setuptools ];
