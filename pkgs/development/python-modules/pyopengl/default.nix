@@ -3,6 +3,7 @@
   stdenv,
   buildPythonPackage,
   fetchPypi,
+  setuptools,
   pkgs,
   pillow,
   mesa,
@@ -11,15 +12,16 @@
 buildPythonPackage rec {
   pname = "pyopengl";
   version = "3.1.9";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
-    pname = "PyOpenGL";
-    inherit version;
+    inherit pname version;
     hash = "sha256-KOvYLF9EkaQYrsqWct/7Otvn0zs56tpFSKW06MA/YMg=";
   };
 
-  propagatedBuildInputs = [ pillow ];
+  build-system = [ setuptools ];
+
+  dependencies = [ pillow ];
 
   patchPhase =
     let
