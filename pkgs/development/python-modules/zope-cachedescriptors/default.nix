@@ -1,7 +1,7 @@
 {
   lib,
   buildPythonPackage,
-  fetchPypi,
+  fetchFromGitHub,
   setuptools,
   pytestCheckHook,
 }:
@@ -11,11 +11,17 @@ buildPythonPackage rec {
   version = "5.1";
   pyproject = true;
 
-  src = fetchPypi {
-    pname = "zope.cachedescriptors";
-    inherit version;
-    hash = "sha256-C4bPDC6XtssteBojPB1M80wfxp8/SIqO9z+2GVzv9UA=";
+  src = fetchFromGitHub {
+    owner = "zopefoundation";
+    repo = "zope.cachedescriptors";
+    tag = version;
+    hash = "sha256-2cb8XosPCAV2BfMisCN9mr0KIu5xcsLPIcPkmpeVT+k=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "setuptools <= 75.6.0" setuptools
+  '';
 
   build-system = [ setuptools ];
 
