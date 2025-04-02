@@ -1,7 +1,7 @@
 {
   lib,
   buildPythonPackage,
-  fetchPypi,
+  fetchFromGitHub,
   setuptools,
   zope-schema,
   zope-interface,
@@ -13,11 +13,17 @@ buildPythonPackage rec {
   version = "6.1";
   pyproject = true;
 
-  src = fetchPypi {
-    pname = "zope.filerepresentation";
-    inherit version;
-    hash = "sha256-pOH4xBgMDIZMTLs+fq7uVkUwNjLx0ElwBlS+ma/jges=";
+  src = fetchFromGitHub {
+    owner = "zopefoundation";
+    repo = "zope.filerepresentation";
+    tag = version;
+    hash = "sha256-6J4munk2yyZ6e9rpU2Op+Gbf0OXGI6GpHjmpUZVRjsY=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "setuptools <= 75.6.0" setuptools
+  '';
 
   build-system = [ setuptools ];
 
