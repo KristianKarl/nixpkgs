@@ -1,9 +1,8 @@
 {
   lib,
   buildPythonPackage,
-  pythonOlder,
-  fetchPypi,
-  fetchpatch,
+  fetchFromGitHub,
+  setuptools,
   hpack,
   hyperframe,
   pytestCheckHook,
@@ -13,25 +12,18 @@
 buildPythonPackage rec {
   pname = "h2";
   version = "4.2.0";
-  format = "setuptools";
+  pyproject = true;
 
-  disabled = pythonOlder "3.6";
-
-  src = fetchPypi {
-    inherit pname version;
-    hash = "sha256-yKUhKWleiLGgV42NLMaEK715EorGhUY7iH7ieBJq0B8=";
+  src = fetchFromGitHub {
+    owner = "python-hyper";
+    repo = "h2";
+    tag = "v${version}";
+    hash = "sha256-rfCwMn2msiRoIvhsdK6hyp3BjDy5AGziX4Or0cb9bKc=";
   };
 
-  patches = [
-    # https://github.com/python-hyper/h2/pull/1274
-    (fetchpatch {
-      name = "fix-tests-in-python-3.11.patch";
-      url = "https://github.com/python-hyper/h2/commit/8952c91606cd014720ccf202a25b5ee1fbed1591.patch";
-      hash = "sha256-skAdAVHMZo1xJEqqKa6FOKPvoQQbGUgGsQjE11jIjtw=";
-    })
-  ];
+  build-system = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     hpack
     hyperframe
   ];
@@ -52,6 +44,7 @@ buildPythonPackage rec {
   ];
 
   meta = with lib; {
+    changelog = "https://github.com/python-hyper/h2/blob/${src.tag}/CHANGELOG.rst";
     description = "HTTP/2 State-Machine based protocol implementation";
     homepage = "https://github.com/python-hyper/h2";
     license = licenses.mit;
